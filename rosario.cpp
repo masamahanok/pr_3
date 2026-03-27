@@ -1,24 +1,29 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
+int is_prime(int n) {
+	if (n < 2) return 0;
+	if (n == 2) return 1;
+	if (n % 2 == 0) return 0;
+	for (int i = 3; i <= (int)sqrt((double)n); i += 2){
+		if (n % i == 0) return 0;
+	}	
+	return 1;
+}
+int main(void) {
+	int n;
 
-
-int main() {
-	int n, x;
-
-	printf("n: ");
+	printf("Введіть N: ");
 	scanf("%d", &n);
 
-
+	printf("\nПрості числа до %d:\n", n);
 	for (int i = 2; i <= n; i++) {
-		x =(int) sqrt(i);
-		if (sqrt(i) - x == 0) {
-			x = 0;
-		}
-		if ((i % 2 == 0) && (x == 0)) {
+		if (is_prime(i)) {
 			printf("%d", i);
+			
 		}
-
 	}
+	
+	printf("\n");
 	return 0;
 }
