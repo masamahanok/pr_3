@@ -13,7 +13,7 @@ int is_prime(int n) {
 int main(void) {
 	int n;
 
-	printf("Введіть N: ");
+	printf("Введіть N:");
 	scanf("%d", &n);
 
 	printf("\nПрості числа до %d:\n", n);

@@ -18,5 +18,8 @@
     <ClCompile Include="rosario.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="thunderouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
